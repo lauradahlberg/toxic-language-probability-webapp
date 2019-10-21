@@ -5,10 +5,10 @@
 * created a binary classifier that uses nlp to assess probability of comment being toxic
 * a user must login, then pay, and after that can submit text for the model to predict the probability that the sentence is toxic
 
-![sign-In](webapp_screenshots/a_signin.png "Sign-in screenshot")
-![Homepage](webapp_screenshots/b_homepage_after_login.png "Homepage screenshot")
-![card charge](webapp_screenshots/c_card_charge.png "card charge")
-![query page](webapp_screenshots/e_text_in_query_box.png "query page")
+![sign-In](webapp_screenshots/a_signin.PNG "Sign-in screenshot")
+![Homepage](webapp_screenshots/b_homepage_after_login.PNG "Homepage screenshot")
+![card charge](webapp_screenshots/c_card_charge.PNG "card charge")
+![query page](webapp_screenshots/e_text_in_query_box.PNG "query page")
 ![result](webapp_screenshots/f_result.png "query result")
 
 ### make a conda env
