@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+{% block content %}
+
+	{% if current_user.is_authenticated %}
+
+	<!Doctype html> 
+	<html> 
+	<body>
+
+	
+		<hr />
+		<h2 class="text-center"><b>Message</b>:  <i>{{ query }}</i></h2> 
+		<ul>
+		{% for category, proba in predictions.items() %}      
+
+			<li>{{ category }} : {{ proba }}</li>
+				
+		{% endfor %}
+		</ul>
+
+	</body> 
+	</html> 
+
+	{% endif %}
+
+{% endblock content %}

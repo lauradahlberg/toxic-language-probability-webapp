@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+{% block content %}
+
+	{% if current_user.is_authenticated %}
+	
+	<!Doctype html>
+	<html>
+	<body>
+		
+		<h5 class="ui header">Signed on as {{ current_user.first_name }}</h5>
+		<br/>
+		<center>
+		<h4>Welcome to Chitchat. A webapp that will help you determine toxic language probability.</h4>
+		</center>
+		<br/>
+		<center>
+		<div class="jumbotron">
+			<div class="ui form-user center raised very padded text container segment">
+			<h3 class="display-3">Try the app for only $500.</h3>
+			<form action="{{ url_for('charge') }}" method="POST">
+			  <script 
+			  	src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+				data-key="{{ app.config['PUBLIC_KEY'] }}"
+				data-description="Payment processed via Stripe"
+				data-amount="50000"
+				data-currency="usd"
+				data-email="{{ email }}"
+				data-image="https://stripe.com/img/documentation/checkout/marketplace.png" 
+				data-locale="auto">
+			  </script>
+			</form>
+			</div>
+		</div>
+		</center>	 
+	</body>
+	</html>
+	  	
+	{% endif %}
+
+{% endblock %}

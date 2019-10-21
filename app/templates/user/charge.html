@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block content %}
+ 
+  <center>
+    <br>
+    <br>
+  <div class="jumbotron">
+    <div class="container">
+        <h3 class="text-center">Type in a sentence in the box below</h3>
+        <p class="text-center">Try something gentle, like "Go home, Sugarbear. Go home."</p>
+        <p class="text-center">OR try something more subtle "You’re smarter than I look"</p>
+        <p class="text-center">OR get downright Dead Pool...</p>
+  
+        <hr />
+          
+        <div class="row">
+          <div class="col-lg-12 form-group-lg">
+            <form action="/result" method="POST">
+              <input type="text" class="form-control form-control-lg" name="query" placeholder="Enter text here">
+              <div class="col-lg-offset-5">
+                <button type="submit" class="btn btn-lg btn-success" value="Submit">Classify Message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+  </center>
+    <br/>
+    <br/>
+
+{% endblock %}
